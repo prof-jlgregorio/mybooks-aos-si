@@ -1,11 +1,13 @@
 package br.com.jlgregorio.mybooks.model;
+import org.springframework.hateoas.RepresentationModel;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "book")
-public class BookModel implements Serializable {
+public class BookModel extends RepresentationModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
